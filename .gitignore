@@ -1,0 +1,20 @@
+build
+.gradle
+*.class
+
+# Eclipse #
+.classpath
+.project
+.settings/*
+
+# IDEA #
+*.ipr
+*.iml
+*.iws
+.idea/libraries
+
+# Package Files #
+*.jar
+*.war
+*.ear
+/bin
