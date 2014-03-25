@@ -3,10 +3,10 @@ buildscript {
 		maven { url "http://repo.spring.io/libs-snapshot" }
 		mavenLocal()
 	}
-	dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC4") }
+	dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC5") }
 }
 
-apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
@@ -22,11 +22,16 @@ repositories {
 }
 
 dependencies {
-	compile("org.springframework.boot:spring-boot-starter-web")
-	compile("org.springframework.boot:spring-boot-starter-data-jpa")
-	compile("org.springframework.boot:spring-boot-starter-actuator")
-	compile("com.h2database:h2")
-	testCompile("org.springframework.boot:spring-boot-starter-test")
+	compile('org.springframework.boot:spring-boot-starter-actuator')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-security')
+	compile('org.springframework.data:spring-data-rest-webmvc')
+	compile('com.h2database:h2')
+	
+	testCompile("org.springframework.boolt:spring-boot-starter-test")
+	
+	compile('org.codehaus.groovy:groovy-all:2.1.9')
 }
 
 task wrapper(type: Wrapper) { 
