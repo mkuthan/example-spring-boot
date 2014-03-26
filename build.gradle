@@ -28,6 +28,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.data:spring-data-rest-webmvc')
 	compile('com.h2database:h2')
+	compile('com.codahale.metrics:metrics-core')
 	
 	testCompile("org.springframework.boolt:spring-boot-starter-test")
 	
