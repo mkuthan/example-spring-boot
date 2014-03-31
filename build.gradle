@@ -28,11 +28,11 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.data:spring-data-rest-webmvc')
 	compile('com.h2database:h2')
-	compile('com.codahale.metrics:metrics-core')
 	
-	testCompile("org.springframework.boolt:spring-boot-starter-test")
-	
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+		
 	compile('org.codehaus.groovy:groovy-all:2.1.9')
+	testCompile('org.spockframework:spock-core:0.7-groovy-2.0')
 }
 
 task wrapper(type: Wrapper) { 
