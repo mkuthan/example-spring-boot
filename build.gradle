@@ -1,9 +1,8 @@
 buildscript {
 	repositories {
-		maven { url "http://repo.spring.io/libs-snapshot" }
-		mavenLocal()
+		mavenCentral()
 	}
-	dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC5") }
+	dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.5.RELEASE") }
 }
 
 apply plugin: 'groovy'
@@ -15,24 +14,24 @@ jar {
 }
 
 repositories {
+  mavenLocal()
 	mavenCentral()
-	maven { url "http://repo.spring.io/libs-snapshot" }
 }
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+  compile('org.springframework.boot:spring-boot-starter-data-rest')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-security')
-	compile('org.springframework.data:spring-data-rest-webmvc')
 	compile('com.h2database:h2')
 	
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 		
-	compile('org.codehaus.groovy:groovy-all:2.1.9')
+	compile('org.codehaus.groovy:groovy-all:2.3.6')
 	testCompile('org.spockframework:spock-core:0.7-groovy-2.0')
 	testCompile('org.spockframework:spock-spring:0.7-groovy-2.0')
-	testCompile('com.jayway.restassured:rest-assured:2.3.1')
+	testCompile('com.jayway.restassured:rest-assured:2.3.3')
 }
 
 task wrapper(type: Wrapper) { 

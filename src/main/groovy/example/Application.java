@@ -9,7 +9,6 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguratio
 
 @Configuration
 @EnableAutoConfiguration
-@Import(RepositoryRestMvcConfiguration.class)
 @ComponentScan
 public class Application {
 
